@@ -1,4 +1,4 @@
-package com.asce4s.akkaintegration.config.interfaces;
+package com.sag.eiti.config.interfaces;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;

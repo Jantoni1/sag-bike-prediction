@@ -1,10 +1,10 @@
-package com.asce4s.akkaintegration;
+package com.sag.eiti;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.asce4s.akkaintegration.actors.TestActor;
-import com.asce4s.akkaintegration.config.SpringExtension;
-import com.asce4s.akkaintegration.config.SpringProps;
+import com.sag.eiti.actors.TestActor;
+import com.sag.eiti.config.SpringExtension;
+import com.sag.eiti.config.SpringProps;
 import com.typesafe.config.ConfigFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -19,21 +19,21 @@ public class AkkaIntegrationApplication {
     @Autowired
     private ApplicationContext context;
 
+    @Autowired
+    private ActorSystem system;
 
     public static void main(String[] args) {
         SpringApplication.run(AkkaIntegrationApplication.class, args);
     }
 
-
     @PostConstruct
-    void init(){
-        ActorSystem system = ActorSystem.create("actor-system", ConfigFactory.load());
+    void init() {
+        system = ActorSystem.create("actor-system", ConfigFactory.load());
         SpringExtension.getInstance().get(system).initialize(context);
-
-
-        ActorRef testActor= system.actorOf(SpringProps.create(system, TestActor.class));
-
-        testActor.tell("hello world",ActorRef.noSender());
+//
+//        ActorRef testActor= system.actorOf(SpringProps.create(system, TestActor.class));
+//
+//        testActor.tell("hello world",ActorRef.noSender());
     }
 
 }

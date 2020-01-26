@@ -1,4 +1,4 @@
-package com.asce4s.akkaintegration.config;
+package com.sag.eiti.config;
 import akka.actor.Actor;
 import akka.actor.IndirectActorProducer;
 import org.springframework.context.ApplicationContext;

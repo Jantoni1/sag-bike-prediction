@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="markers" type="markersType"/>
+  <xs:complexType name="bikeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="number" use="optional"/>
+        <xs:attribute type="xs:string" name="bike_type" use="optional"/>
+        <xs:attribute type="xs:string" name="lock_types" use="optional"/>
+        <xs:attribute type="xs:string" name="active" use="optional"/>
+        <xs:attribute type="xs:string" name="state" use="optional"/>
+        <xs:attribute type="xs:string" name="electric_lock" use="optional"/>
+        <xs:attribute type="xs:string" name="boardcomputer" use="optional"/>
+        <xs:attribute type="xs:string" name="pedelec_battery" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="placeType" mixed="true">
+    <xs:sequence>
+      <xs:element type="bikeType" name="bike" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="uid" use="optional"/>
+    <xs:attribute type="xs:string" name="lat" use="optional"/>
+    <xs:attribute type="xs:string" name="lng" use="optional"/>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+    <xs:attribute type="xs:string" name="spot" use="optional"/>
+    <xs:attribute type="xs:string" name="number" use="optional"/>
+    <xs:attribute type="xs:string" name="bikes" use="optional"/>
+    <xs:attribute type="xs:string" name="booked_bikes" use="optional"/>
+    <xs:attribute type="xs:string" name="bike_racks" use="optional"/>
+    <xs:attribute type="xs:string" name="free_racks" use="optional"/>
+    <xs:attribute type="xs:string" name="terminal_type" use="optional"/>
+    <xs:attribute type="xs:string" name="bike_numbers" use="optional"/>
+    <xs:attribute type="xs:string" name="bike_types" use="optional"/>
+    <xs:attribute type="xs:string" name="place_type" use="optional"/>
+    <xs:attribute type="xs:string" name="maintenance" use="optional"/>
+    <xs:attribute type="xs:string" name="bike" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="cityType">
+    <xs:sequence>
+      <xs:element type="placeType" name="place" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="uid"/>
+    <xs:attribute type="xs:string" name="lat"/>
+    <xs:attribute type="xs:string" name="lng"/>
+    <xs:attribute type="xs:string" name="zoom"/>
+    <xs:attribute type="xs:string" name="maps_icon"/>
+    <xs:attribute type="xs:string" name="alias"/>
+    <xs:attribute type="xs:string" name="break"/>
+    <xs:attribute type="xs:string" name="name"/>
+    <xs:attribute type="xs:string" name="num_places"/>
+    <xs:attribute type="xs:string" name="refresh_rate"/>
+    <xs:attribute type="xs:string" name="bounds"/>
+    <xs:attribute type="xs:string" name="booked_bikes"/>
+    <xs:attribute type="xs:string" name="set_point_bikes"/>
+    <xs:attribute type="xs:string" name="available_bikes"/>
+    <xs:attribute type="xs:string" name="return_to_official_only"/>
+    <xs:attribute type="xs:string" name="bike_types"/>
+    <xs:attribute type="xs:string" name="website"/>
+  </xs:complexType>
+  <xs:complexType name="countryType">
+    <xs:sequence>
+      <xs:element type="cityType" name="city"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="lat"/>
+    <xs:attribute type="xs:string" name="lng"/>
+    <xs:attribute type="xs:string" name="zoom"/>
+    <xs:attribute type="xs:string" name="name"/>
+    <xs:attribute type="xs:string" name="hotline"/>
+    <xs:attribute type="xs:string" name="domain"/>
+    <xs:attribute type="xs:string" name="language"/>
+    <xs:attribute type="xs:string" name="email"/>
+    <xs:attribute type="xs:string" name="timezone"/>
+    <xs:attribute type="xs:string" name="currency"/>
+    <xs:attribute type="xs:string" name="country_calling_code"/>
+    <xs:attribute type="xs:string" name="system_operator_address"/>
+    <xs:attribute type="xs:string" name="country"/>
+    <xs:attribute type="xs:string" name="country_name"/>
+    <xs:attribute type="xs:string" name="terms"/>
+    <xs:attribute type="xs:string" name="policy"/>
+    <xs:attribute type="xs:string" name="website"/>
+    <xs:attribute type="xs:string" name="booked_bikes"/>
+    <xs:attribute type="xs:string" name="set_point_bikes"/>
+    <xs:attribute type="xs:string" name="available_bikes"/>
+    <xs:attribute type="xs:string" name="pricing"/>
+  </xs:complexType>
+  <xs:complexType name="markersType">
+    <xs:sequence>
+      <xs:element type="countryType" name="country"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

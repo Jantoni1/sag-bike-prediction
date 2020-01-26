@@ -1,4 +1,4 @@
-package com.asce4s.akkaintegration;
+package com.sag.eiti;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

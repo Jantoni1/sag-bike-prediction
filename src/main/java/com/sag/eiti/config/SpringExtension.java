@@ -1,8 +1,11 @@
-package com.asce4s.akkaintegration.config;
+package com.sag.eiti.config;
 
 import akka.actor.*;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.context.ApplicationContext;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SpringExtension extends AbstractExtensionId<SpringExtension.SpringExt> {
 
     private static SpringExtension instance = new SpringExtension();

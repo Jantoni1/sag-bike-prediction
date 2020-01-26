@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<markers>
+    <country lat="23.2568" lng="77.4004" zoom="12" name="Chartered Bike (Bhopal - India)" hotline="00919993288888"
+             domain="bi" language="en" email="info@charteredbike.in" timezone="Asia/Kolkata" currency="INR"
+             country_calling_code="+91"
+             system_operator_address="Chartered Speed Pvt Ltd, Sanathal Circle, Sarkhej-Bavla Highway, Santahal, Ahmedabad-380022"
+             country="IN" country_name="India" terms="http://charteredbike.in/terms-conditions/"
+             policy="https://www.nextbike.de/xx/privacy/#201906" website="http://www.charteredbike.in/en/"
+             booked_bikes="0" set_point_bikes="545" available_bikes="173"
+             pricing="http://www.charteredbike.in/en/prices/">
+        <city uid="376" lat="23.2467" lng="77.411" zoom="12" maps_icon="chartered_bike" alias="bhopal" break="0"
+              name="Bhopal" num_places="98" refresh_rate="10120"
+              bounds='{"south_west":{"lat":23.1646,"lng":77.3411},"north_east":{"lat":23.2863,"lng":77.4856}}'
+              booked_bikes="0" set_point_bikes="535" available_bikes="173" return_to_official_only="1"
+              bike_types='{"4":1,"15":182}' website="http://www.charteredbike.in/en/">
+            <place uid="2943522" lat="23.249586" lng="77.395599" name="VARDHMAAN PARK" spot="1" number="9823" bikes="5"
+                   booked_bikes="0" bike_racks="6" free_racks="1" terminal_type="sign"
+                   bike_numbers='79495,79342,79314,79257,79101' bike_types='{"15":5}' place_type="0">
+                <bike number="79495" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13512" pedelec_battery=""/>
+                <bike number="79342" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26206" pedelec_battery=""/>
+                <bike number="79314" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13477" pedelec_battery=""/>
+                <bike number="79257" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25607" pedelec_battery=""/>
+                <bike number="79101" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26197" pedelec_battery=""/>
+            </place>
+            <place uid="2943595" lat="23.222624" lng="77.424051" name="NANDAN KANAN PARK (CHARIMLI)" spot="1"
+                   number="9871" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79300' bike_types='{"15":1}' place_type="0">
+                <bike number="79300" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25975" pedelec_battery=""/>
+            </place>
+            <place uid="2943819" lat="23.192864" lng="77.450197" name="HOSHANGABAD 3" spot="1" number="9803" bikes="2"
+                   booked_bikes="0" bike_racks="10" free_racks="8" terminal_type="sign" bike_numbers='79345,79236'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79345" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13320" pedelec_battery=""/>
+                <bike number="79236" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26125" pedelec_battery=""/>
+            </place>
+            <place uid="3091236" lat="23.203445" lng="77.446469" name="HOSHANGABAD 1" spot="1" number="9801" bikes="2"
+                   booked_bikes="0" bike_racks="10" free_racks="8" maintenance="1" terminal_type="sign"
+                   bike_numbers='79526,79504' bike_types='{"15":2}' place_type="0">
+                <bike number="79526" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25834" pedelec_battery=""/>
+                <bike number="79504" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25667" pedelec_battery=""/>
+            </place>
+            <place uid="3091256" lat="23.200714" lng="77.447472" name="HOSHANGABAD 2" spot="1" number="9802" bikes="4"
+                   booked_bikes="0" bike_racks="6" free_racks="2" terminal_type="sign"
+                   bike_numbers='79483,79419,79108,79062' bike_types='{"15":4}' place_type="0">
+                <bike number="79483" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25681" pedelec_battery=""/>
+                <bike number="79419" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25958" pedelec_battery=""/>
+                <bike number="79108" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26062" pedelec_battery=""/>
+                <bike number="79062" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25664" pedelec_battery=""/>
+            </place>
+            <place uid="3091278" lat="23.187359" lng="77.452427" name="HOSHANGABAD 4" spot="1" number="9804" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79379,79319'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79379" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25678" pedelec_battery=""/>
+                <bike number="79319" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26099" pedelec_battery=""/>
+            </place>
+            <place uid="3091287" lat="23.182398" lng="77.455573" name="HOSHANGABAD 5" spot="1" number="9805" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79425'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79425" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25993" pedelec_battery=""/>
+            </place>
+            <place uid="3091293" lat="23.229068" lng="77.442164" name="ISBT" spot="1" number="9806" bikes="4"
+                   booked_bikes="0" bike_racks="6" free_racks="2" terminal_type="sign"
+                   bike_numbers='79490,79472,79320,79131' bike_types='{"15":4}' place_type="0">
+                <bike number="79490" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25779" pedelec_battery=""/>
+                <bike number="79472" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26155" pedelec_battery=""/>
+                <bike number="79320" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25824" pedelec_battery=""/>
+                <bike number="79131" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25952" pedelec_battery=""/>
+            </place>
+            <place uid="3091333" lat="23.227035" lng="77.435616" name="SHIVNEER WATER PLANT ZONE 2" spot="1"
+                   number="9812" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79372' bike_types='{"15":1}' place_type="0">
+                <bike number="79372" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25615" pedelec_battery=""/>
+            </place>
+            <place uid="3091345" lat="23.22874" lng="77.428269" name="6 NO. MARKET" spot="1" number="9813" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79071'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79071" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25942" pedelec_battery=""/>
+            </place>
+            <place uid="3091351" lat="23.225072" lng="77.42874" name="NUTAN COLLEGE" spot="1" number="9814" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79388'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79388" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25687" pedelec_battery=""/>
+            </place>
+            <place uid="3091373" lat="23.22866" lng="77.415382" name="TULSI NAGAR" spot="1" number="9816" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79507'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79507" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25977" pedelec_battery=""/>
+            </place>
+            <place uid="3091405" lat="23.231905" lng="77.411919" name="MAYUR PARK LINK ROAD NO.1" spot="1" number="9817"
+                   bikes="2" booked_bikes="0" bike_racks="10" free_racks="8" terminal_type="sign"
+                   bike_numbers='79438,79063' bike_types='{"15":2}' place_type="0">
+                <bike number="79438" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25864" pedelec_battery=""/>
+                <bike number="79063" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26112" pedelec_battery=""/>
+            </place>
+            <place uid="3091414" lat="23.23295" lng="77.401322" name="KAMLA NEHRU GIRLS SCHOOL T.T. NAGAR" spot="1"
+                   number="9818" bikes="0" booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign"
+                   bike_numbers='' bike_types="" place_type="0"/>
+            <place uid="3091421" lat="23.237019" lng="77.40025" name="ROSHANPURA SQUARE" spot="1" number="9819"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79487,79022' bike_types='{"15":2}' place_type="0">
+                <bike number="79487" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13261" pedelec_battery=""/>
+                <bike number="79022" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25971" pedelec_battery=""/>
+            </place>
+            <place uid="3091449" lat="23.243884" lng="77.397579" name="POLYTECHNIC SQUARE" spot="1" number="9820"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79121'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79121" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26005" pedelec_battery=""/>
+            </place>
+            <place uid="3091457" lat="23.244284" lng="77.387085" name="BOAT CLUB 1" spot="1" number="9821" bikes="5"
+                   booked_bikes="0" bike_racks="10" free_racks="5" terminal_type="sign"
+                   bike_numbers='79514,79473,79457,79299,79103' bike_types='{"15":5}' place_type="0">
+                <bike number="79514" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25984" pedelec_battery=""/>
+                <bike number="79473" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25979" pedelec_battery=""/>
+                <bike number="79457" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26139" pedelec_battery=""/>
+                <bike number="79299" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26048" pedelec_battery=""/>
+                <bike number="79103" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25775" pedelec_battery=""/>
+            </place>
+            <place uid="3091466" lat="23.242482" lng="77.381173" name="BOAT CLUB 2" spot="1" number="9822" bikes="2"
+                   booked_bikes="0" bike_racks="10" free_racks="8" terminal_type="sign" bike_numbers='79254,79102'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79254" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13734" pedelec_battery=""/>
+                <bike number="79102" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26008" pedelec_battery=""/>
+            </place>
+            <place uid="3097188" lat="23.214601" lng="77.435593" name="10.NO MARKET, BMC PARKING" spot="1" number="9835"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79013'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79013" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25941" pedelec_battery=""/>
+            </place>
+            <place uid="3125527" lat="23.226349" lng="77.392242" name="P&amp;T SQUARE" spot="1" number="9826" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79366,79066'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79366" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25763" pedelec_battery=""/>
+                <bike number="79066" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25668" pedelec_battery=""/>
+            </place>
+            <place uid="3125534" lat="23.237441" lng="77.421214" name="VINDHYACHAL BHAWAN" spot="1" number="9839"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79454'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79454" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25735" pedelec_battery=""/>
+            </place>
+            <place uid="3125544" lat="23.226139" lng="77.386867" name="DEPOT SQUARE" spot="1" number="9825" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79316,79142'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79316" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25973" pedelec_battery=""/>
+                <bike number="79142" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26036" pedelec_battery=""/>
+            </place>
+            <place uid="3125556" lat="23.216699" lng="77.376212" name="SAIR SAPATA" spot="1" number="9827" bikes="2"
+                   booked_bikes="0" bike_racks="10" free_racks="8" terminal_type="sign" bike_numbers='79349,79303'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79349" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25686" pedelec_battery=""/>
+                <bike number="79303" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13683" pedelec_battery=""/>
+            </place>
+            <place uid="3125567" lat="23.219139" lng="77.413739" name="PATRAKAAR COLONY" spot="1" number="9830"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79329'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79329" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26010" pedelec_battery=""/>
+            </place>
+            <place uid="3125573" lat="23.202557" lng="77.425174" name="SHAHPURA LAKE" spot="1" number="9833" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79443,79441,79376'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79443" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26134" pedelec_battery=""/>
+                <bike number="79441" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26089" pedelec_battery=""/>
+                <bike number="79376" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26002" pedelec_battery=""/>
+            </place>
+            <place uid="3125643" lat="23.217803" lng="77.419776" name="EKANT PARK" spot="1" number="9831" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79463'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79463" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25677" pedelec_battery=""/>
+            </place>
+            <place uid="3125659" lat="23.215321" lng="77.426918" name="RAJIV GANDHI CHOWK" spot="1" number="9832"
+                   bikes="0" booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers=''
+                   bike_types="" place_type="0"/>
+            <place uid="3125675" lat="23.217316" lng="77.430646" name="BITTAN SQUARE" spot="1" number="9836" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79112'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79112" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13797" pedelec_battery=""/>
+            </place>
+            <place uid="3125801" lat="23.236955" lng="77.433214" name="RM MARG 2" spot="1" number="9807" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79059'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79059" bike_type="15" lock_types='analog_code_lock' active="1" state="ok"
+                      electric_lock="1" boardcomputer="25759" pedelec_battery=""/>
+            </place>
+            <place uid="3125815" lat="23.233658" lng="77.434393" name="RM MARG 1" spot="1" number="9808" bikes="0"
+                   booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers='' bike_types=""
+                   place_type="0"/>
+            <place uid="3328056" lat="23.220998" lng="77.403485" name="MANIT SQUARE" spot="1" number="9828" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79479,79035'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79479" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26119" pedelec_battery=""/>
+                <bike number="79035" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13587" pedelec_battery=""/>
+            </place>
+            <place uid="3328064" lat="23.216004" lng="77.395599" name="KAMLA NAGAR THANA" spot="1" number="9829"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79068,79056' bike_types='{"15":2}' place_type="0">
+                <bike number="79068" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26035" pedelec_battery=""/>
+                <bike number="79056" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25680" pedelec_battery=""/>
+            </place>
+            <place uid="3338518" lat="23.232933" lng="77.430657" name="CHITRAGUPT MARG 1 (DB MALL)" spot="1"
+                   number="9810" bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79070,79057' bike_types='{"15":2}' place_type="0">
+                <bike number="79070" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25649" pedelec_battery=""/>
+                <bike number="79057" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25747" pedelec_battery=""/>
+            </place>
+            <place uid="3873453" lat="23.259188" lng="77.382371" name="VIP ROAD (KARBALA) " spot="1" number="9886"
+                   bikes="3" booked_bikes="0" bike_racks="10" free_racks="7" terminal_type="sign"
+                   bike_numbers='79235,79078,79024' bike_types='{"15":3}' place_type="0">
+                <bike number="79235" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26131" pedelec_battery=""/>
+                <bike number="79078" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25873" pedelec_battery=""/>
+                <bike number="79024" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25999" pedelec_battery=""/>
+            </place>
+            <place uid="3999205" lat="23.178502" lng="77.45811" name="HOSHANGABAD 6" spot="1" number="9837" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79283,79270,79261'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79283" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26147" pedelec_battery=""/>
+                <bike number="79270" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25985" pedelec_battery=""/>
+                <bike number="79261" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25731" pedelec_battery=""/>
+            </place>
+            <place uid="3999279" lat="23.183357" lng="77.454548" name="HOSHANGABAD 9" spot="1" number="9843" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79077,79046'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79077" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25978" pedelec_battery=""/>
+                <bike number="79046" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26102" pedelec_battery=""/>
+            </place>
+            <place uid="4114479" lat="23.231342" lng="77.436114" name="BMC PARKING ZONE II" spot="1" number="9841"
+                   bikes="0" booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers=''
+                   bike_types="" place_type="0"/>
+            <place uid="4124527" lat="23.231783" lng="77.457842" name="SMART CITY" spot="1" number="9879" bikes="2"
+                   booked_bikes="0" bike_racks="5" free_racks="3" terminal_type="sign" bike_numbers='79436,79049'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79436" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25661" pedelec_battery=""/>
+                <bike number="79049" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26217" pedelec_battery=""/>
+            </place>
+            <place uid="4149575" lat="23.210056" lng="77.431175" name="1100 QUARTERS" spot="1" number="9834" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79243'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79243" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26150" pedelec_battery=""/>
+            </place>
+            <place uid="4258112" lat="23.212206" lng="77.437242" name="10.5 NO." spot="1" number="9845" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79403,79347'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79403" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26115" pedelec_battery=""/>
+                <bike number="79347" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25675" pedelec_battery=""/>
+            </place>
+            <place uid="4775420" lat="23.164564" lng="77.467552" name="HOSHANGABAD 7" spot="1" number="9840" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79252,79099,79037'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79252" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26103" pedelec_battery=""/>
+                <bike number="79099" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26111" pedelec_battery=""/>
+                <bike number="79037" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25981" pedelec_battery=""/>
+            </place>
+            <place uid="4775457" lat="23.171014" lng="77.462352" name="HOSHANGABAD 8" spot="1" number="9842" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79123,79006'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79123" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25666" pedelec_battery=""/>
+                <bike number="79006" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25601" pedelec_battery=""/>
+            </place>
+            <place uid="5136912" lat="23.217862" lng="77.369535" name="VAN VIHAR (RAMU GATE)" spot="1" number="9847"
+                   bikes="5" booked_bikes="0" bike_racks="10" free_racks="5" terminal_type="sign"
+                   bike_numbers='79461,79374,79286,79139,79095' bike_types='{"15":5}' place_type="0">
+                <bike number="79461" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25684" pedelec_battery=""/>
+                <bike number="79374" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26143" pedelec_battery=""/>
+                <bike number="79286" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25769" pedelec_battery=""/>
+                <bike number="79139" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13582" pedelec_battery=""/>
+                <bike number="79095" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26123" pedelec_battery=""/>
+            </place>
+            <place uid="5136979" lat="23.243731" lng="77.410401" name="POLICE CONTROL ROOM" spot="1" number="9846"
+                   bikes="0" booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers=''
+                   bike_types="" place_type="0"/>
+            <place uid="5207002" lat="23.279566" lng="77.392904" name="ARMY CANT" spot="1" number="9891" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79107,79047'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79107" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25600" pedelec_battery=""/>
+                <bike number="79047" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25749" pedelec_battery=""/>
+            </place>
+            <place uid="5302767" lat="23.272229" lng="77.341134" name="BAIRAGARH POLICE STATION" spot="1" number="9888"
+                   bikes="2" booked_bikes="0" bike_racks="4" free_racks="2" terminal_type="sign"
+                   bike_numbers='79492,79477' bike_types='{"15":2}' place_type="0">
+                <bike number="79492" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25663" pedelec_battery=""/>
+                <bike number="79477" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26196" pedelec_battery=""/>
+            </place>
+            <place uid="5667643" lat="23.257121" lng="77.391814" name="SELFIE POINT VIP ROAD" spot="1" number="9885"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79533,79384' bike_types='{"15":2}' place_type="0">
+                <bike number="79533" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26098" pedelec_battery=""/>
+                <bike number="79384" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26208" pedelec_battery=""/>
+            </place>
+            <place uid="5667939" lat="23.211206" lng="77.441297" name="SHALIMAR ENCLAVE" spot="1" number="9859"
+                   bikes="0" booked_bikes="0" bike_racks="4" free_racks="4" terminal_type="sign" bike_numbers=''
+                   bike_types="" place_type="0"/>
+            <place uid="5685241" lat="23.206999" lng="77.434549" name="ASHOKA SOACIETY E7 AREARA COLONY" spot="1"
+                   number="9860" bikes="2" booked_bikes="0" bike_racks="4" free_racks="2" terminal_type="sign"
+                   bike_numbers='79266,79018' bike_types='{"15":2}' place_type="0">
+                <bike number="79266" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26214" pedelec_battery=""/>
+                <bike number="79018" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25827" pedelec_battery=""/>
+            </place>
+            <place uid="5701204" lat="23.218677" lng="77.456526" name="PANCHVATI MARKET" spot="1" number="9855"
+                   bikes="2" booked_bikes="0" bike_racks="4" free_racks="2" terminal_type="sign"
+                   bike_numbers='79411,79048' bike_types='{"15":2}' place_type="0">
+                <bike number="79411" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26006" pedelec_battery=""/>
+                <bike number="79048" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26205" pedelec_battery=""/>
+            </place>
+            <place uid="5701211" lat="23.217937" lng="77.450672" name="SHAKTI NAGAR MARKET" spot="1" number="9853"
+                   bikes="1" booked_bikes="0" bike_racks="4" free_racks="3" terminal_type="sign" bike_numbers='79028'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79028" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25954" pedelec_battery=""/>
+            </place>
+            <place uid="5704022" lat="23.210729" lng="77.452595" name="SANKET NAGAR AIIMS ROAD 1" spot="1" number="9858"
+                   bikes="2" booked_bikes="0" bike_racks="4" free_racks="2" terminal_type="sign"
+                   bike_numbers='79493,79094' bike_types='{"15":2}' place_type="0">
+                <bike number="79493" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26148" pedelec_battery=""/>
+                <bike number="79094" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13768" pedelec_battery=""/>
+            </place>
+            <place uid="5724882" lat="23.219664" lng="77.436446" name="E-2 NURSERY" spot="1" number="9838" bikes="1"
+                   booked_bikes="0" bike_racks="4" free_racks="3" terminal_type="sign" bike_numbers='79264'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79264" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26032" pedelec_battery=""/>
+            </place>
+            <place uid="6162356" lat="23.286264" lng="77.354467" name="ADITYA AVENUE" spot="1" number="9889" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79067'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79067" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25742" pedelec_battery=""/>
+            </place>
+            <place uid="6162380" lat="23.171723" lng="77.462311" name="HOSHANGABAD 10" spot="1" number="9809" bikes="5"
+                   booked_bikes="0" bike_racks="4" free_racks="0" terminal_type="sign"
+                   bike_numbers='79537,79534,79518,79444,79140' bike_types='{"15":5}' place_type="0">
+                <bike number="79537" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26047" pedelec_battery=""/>
+                <bike number="79534" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25998" pedelec_battery=""/>
+                <bike number="79518" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25794" pedelec_battery=""/>
+                <bike number="79444" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25989" pedelec_battery=""/>
+                <bike number="79140" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26011" pedelec_battery=""/>
+            </place>
+            <place uid="6519580" lat="23.268475" lng="77.45751" name="MINAAL MALL" spot="1" number="9869" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79516,79377'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79516" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26049" pedelec_battery=""/>
+                <bike number="79377" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26009" pedelec_battery=""/>
+            </place>
+            <place uid="6519648" lat="23.188617" lng="77.433802" name="AURA MALL" spot="1" number="9864" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79132,79041,79098'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79132" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25841" pedelec_battery=""/>
+                <bike number="79041" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26211" pedelec_battery=""/>
+                <bike number="79098" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26207" pedelec_battery=""/>
+            </place>
+            <place uid="6544723" lat="23.195847" lng="77.417121" name="SWARNA JAYANTI PARK" spot="1" number="9867"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79420,79114' bike_types='{"15":2}' place_type="0">
+                <bike number="79420" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25751" pedelec_battery=""/>
+                <bike number="79114" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26158" pedelec_battery=""/>
+            </place>
+            <place uid="6544874" lat="23.189887" lng="77.464709" name="BHEL SANGAM CHAURAHA" spot="1" number="9882"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79248,79141' bike_types='{"15":2}' place_type="0">
+                <bike number="79248" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26003" pedelec_battery=""/>
+                <bike number="79141" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25795" pedelec_battery=""/>
+            </place>
+            <place uid="6545005" lat="23.195226" lng="77.464257" name="BAGMUGALIA, KATARA HILLS RD. " spot="1"
+                   number="9883" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79396' bike_types='{"15":1}' place_type="0">
+                <bike number="79396" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25800" pedelec_battery=""/>
+            </place>
+            <place uid="6545154" lat="23.211058" lng="77.454529" name="SANKET NAGAR AIIMS ROAD 2" spot="1" number="9857"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79322,79031' bike_types='{"15":2}' place_type="0">
+                <bike number="79322" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25951" pedelec_battery=""/>
+                <bike number="79031" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25837" pedelec_battery=""/>
+            </place>
+            <place uid="6545229" lat="23.217155" lng="77.463034" name="BDA COMPLEX " spot="1" number="9856" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79524,79044'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79524" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26014" pedelec_battery=""/>
+                <bike number="79044" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25753" pedelec_battery=""/>
+            </place>
+            <place uid="6545255" lat="23.21643" lng="77.452377" name="DRM ROAD 1" spot="1" number="9854" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79360,79317,79082'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79360" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25676" pedelec_battery=""/>
+                <bike number="79317" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25793" pedelec_battery=""/>
+                <bike number="79082" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25997" pedelec_battery=""/>
+            </place>
+            <place uid="6545489" lat="23.188235" lng="77.436275" name="SOUTH AVENUE" spot="1" number="9865" bikes="3"
+                   booked_bikes="0" bike_racks="6" free_racks="3" terminal_type="sign" bike_numbers='79356,79096,79086'
+                   bike_types='{"15":3}' place_type="0">
+                <bike number="79356" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13672" pedelec_battery=""/>
+                <bike number="79096" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25991" pedelec_battery=""/>
+                <bike number="79086" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25986" pedelec_battery=""/>
+            </place>
+            <place uid="6545656" lat="23.250998" lng="77.464923" name="INDRAPURI PARK SECTOR C" spot="1" number="9875"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79289'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79289" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25670" pedelec_battery=""/>
+            </place>
+            <place uid="6545672" lat="23.252854" lng="77.463565" name="NIZAMUDDIN ROAD 1" spot="1" number="9876"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79111'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79111" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25672" pedelec_battery=""/>
+            </place>
+            <place uid="6545700" lat="23.267245" lng="77.466847" name="NIZAMUDDIN ROAD 3" spot="1" number="9878"
+                   bikes="4" booked_bikes="0" bike_racks="6" free_racks="2" terminal_type="sign"
+                   bike_numbers='79481,79332,79116,79052' bike_types='{"15":4}' place_type="0">
+                <bike number="79481" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26126" pedelec_battery=""/>
+                <bike number="79332" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26004" pedelec_battery=""/>
+                <bike number="79116" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25974" pedelec_battery=""/>
+                <bike number="79052" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25776" pedelec_battery=""/>
+            </place>
+            <place uid="6570099" lat="23.251645" lng="77.456501" name="J.K. SQUARE" spot="1" number="9873" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79069'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79069" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25839" pedelec_battery=""/>
+            </place>
+            <place uid="6570106" lat="23.230224" lng="77.485648" name="AVADHPURI TIRAHA" spot="1" number="9880"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79471'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79471" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25966" pedelec_battery=""/>
+            </place>
+            <place uid="7782380" lat="23.274505" lng="77.460654" name="MOGLI PARK MINAAL CAMPUS" spot="1" number="9870"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79247,79051' bike_types='{"15":2}' place_type="0">
+                <bike number="79247" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26141" pedelec_battery=""/>
+                <bike number="79051" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26219" pedelec_battery=""/>
+            </place>
+            <place uid="7782584" lat="23.275557" lng="77.45477" name="FOUNTAIN PARK MINAAL CAMPUS" spot="1"
+                   number="9868" bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79462,79079' bike_types='{"15":2}' place_type="0">
+                <bike number="79462" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13550" pedelec_battery=""/>
+                <bike number="79079" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25692" pedelec_battery=""/>
+            </place>
+            <place uid="8223599" lat="23.233822" lng="77.399169" name="SMART PARKING T.T. NAGAR" spot="1" number="9851"
+                   bikes="2" booked_bikes="0" bike_racks="8" free_racks="6" terminal_type="sign"
+                   bike_numbers='79498,79092' bike_types='{"15":2}' place_type="0">
+                <bike number="79498" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25737" pedelec_battery=""/>
+                <bike number="79092" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="12803" pedelec_battery=""/>
+            </place>
+            <place uid="8612989" lat="23.258523" lng="77.464141" name="NIZAMUDDIN ROAD 2" spot="1" number="9877"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79105,79091' bike_types='{"15":2}' place_type="0">
+                <bike number="79105" bike_type="15" lock_types='analog_code_lock' active="1" state="ok"
+                      electric_lock="1" boardcomputer="13834" pedelec_battery=""/>
+                <bike number="79091" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25792" pedelec_battery=""/>
+            </place>
+            <place uid="8613136" lat="23.25004" lng="77.467072" name="BEEMA HOSPITAL, SECTOR C" spot="1" number="9874"
+                   bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79295,79007' bike_types='{"15":2}' place_type="0">
+                <bike number="79295" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26028" pedelec_battery=""/>
+                <bike number="79007" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25608" pedelec_battery=""/>
+            </place>
+            <place uid="8741405" lat="23.189384" lng="77.429729" name="MAHAKALI SOCIETY (TRILANGA)" spot="1"
+                   number="9863" bikes="1" booked_bikes="0" bike_racks="8" free_racks="7" terminal_type="sign"
+                   bike_numbers='79509' bike_types='{"15":1}' place_type="0">
+                <bike number="79509" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25996" pedelec_battery=""/>
+            </place>
+            <place uid="9487985" lat="23.167347" lng="77.438082" name="AKRITI ECO CITY BLUE SKY" spot="1" number="9866"
+                   bikes="1" booked_bikes="0" bike_racks="8" free_racks="7" terminal_type="sign" bike_numbers='79382'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79382" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26127" pedelec_battery=""/>
+            </place>
+            <place uid="9661071" lat="23.284232" lng="77.381079" name="ARMY CANT 2" spot="1" number="9890" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79122,79080'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79122" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26086" pedelec_battery=""/>
+                <bike number="79080" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25826" pedelec_battery=""/>
+            </place>
+            <place uid="9784683" lat="23.208478" lng="77.427518" name="RCVP NORONHA ACADEMY" spot="1" number="9848"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79336'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79336" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13586" pedelec_battery=""/>
+            </place>
+            <place uid="9860792" lat="23.239786" lng="77.435942" name="RACHNA NAGAR (Underbridge)" spot="1"
+                   number="9850" bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79545,79327' bike_types='{"15":2}' place_type="0">
+                <bike number="79545" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26013" pedelec_battery=""/>
+                <bike number="79327" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25796" pedelec_battery=""/>
+            </place>
+            <place uid="9860816" lat="23.225875" lng="77.422594" name="5 NO. MARKET" spot="1" number="9872" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79130'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79130" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26033" pedelec_battery=""/>
+            </place>
+            <place uid="9860844" lat="23.24165" lng="77.374374" name="VAN VIHAR GATE NO. 1" spot="1" number="9824"
+                   bikes="7" booked_bikes="0" bike_racks="10" free_racks="3" terminal_type="sign"
+                   bike_numbers='79489,79482,79440,79430,79240,79064,79032' bike_types='{"15":7}' place_type="0">
+                <bike number="79489" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25689" pedelec_battery=""/>
+                <bike number="79482" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25777" pedelec_battery=""/>
+                <bike number="79440" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25691" pedelec_battery=""/>
+                <bike number="79430" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25870" pedelec_battery=""/>
+                <bike number="79240" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25976" pedelec_battery=""/>
+                <bike number="79064" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25780" pedelec_battery=""/>
+                <bike number="79032" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25671" pedelec_battery=""/>
+            </place>
+            <place uid="9860863" lat="23.25491" lng="77.397813" name="GAUHAR MAHAL " spot="1" number="9884" bikes="0"
+                   booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers='' bike_types=""
+                   place_type="0"/>
+            <place uid="9860889" lat="23.272521" lng="77.369707" name="LALGHATI SQUARE (VIP ROAD)" spot="1"
+                   number="9887" bikes="2" booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign"
+                   bike_numbers='79429,79125' bike_types='{"4":1,"15":1}' place_type="0">
+                <bike number="79429" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25983" pedelec_battery=""/>
+                <bike number="79125" bike_type="4" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25611" pedelec_battery=""/>
+            </place>
+            <place uid="9860937" lat="23.200578" lng="77.434629" name="BASANT KUNJ E8 ARERA COLONY" spot="1"
+                   number="9861" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79246' bike_types='{"15":1}' place_type="0">
+                <bike number="79246" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26124" pedelec_battery=""/>
+            </place>
+            <place uid="9860979" lat="23.18573" lng="77.453916" name="DANISH SQUARE " spot="1" number="9881" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79269,79087'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79269" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26145" pedelec_battery=""/>
+                <bike number="79087" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25685" pedelec_battery=""/>
+            </place>
+            <place uid="11993184" lat="23.210242" lng="77.456433" name="AIIMS 1 (TRAUMA CENTER)" spot="1" number="9893"
+                   bikes="1" booked_bikes="0" free_racks="0" terminal_type="sign" bike_numbers='79029'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79029" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25987" pedelec_battery=""/>
+            </place>
+            <place uid="11995282" lat="23.205616" lng="77.460985" name="AIIMS 2 (NURSING HOSTEL)" spot="1" number="9894"
+                   bikes="2" booked_bikes="0" free_racks="0" terminal_type="sign" bike_numbers='79500,79021'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79500" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25838" pedelec_battery=""/>
+                <bike number="79021" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25969" pedelec_battery=""/>
+            </place>
+            <place uid="22079751" lat="23.23384" lng="77.409226" name="LINK ROAD 1" spot="1" number="9852" bikes="1"
+                   booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79373'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79373" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="13794" pedelec_battery=""/>
+            </place>
+            <place uid="22079854" lat="23.256664" lng="77.396821" name="SADAR MANZIL" spot="1" number="9895" bikes="2"
+                   booked_bikes="0" bike_racks="6" free_racks="4" terminal_type="sign" bike_numbers='79325,79002'
+                   bike_types='{"15":2}' place_type="0">
+                <bike number="79325" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26195" pedelec_battery=""/>
+                <bike number="79002" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25605" pedelec_battery=""/>
+            </place>
+            <place uid="22079911" lat="23.261803" lng="77.388317" name="KOH-E-FIZA POLICE STATION" spot="1"
+                   number="9896" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79491' bike_types='{"15":1}' place_type="0">
+                <bike number="79491" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25778" pedelec_battery=""/>
+            </place>
+            <place uid="22079965" lat="23.266793" lng="77.395234" name="SHAHJAHANABAD POLICE STATION" spot="1"
+                   number="9897" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79012' bike_types='{"15":1}' place_type="0">
+                <bike number="79012" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25948" pedelec_battery=""/>
+            </place>
+            <place uid="24174582" lat="23.284434" lng="77.405449" name="ARIF NAGAR" spot="1" number="9892" bikes="0"
+                   booked_bikes="0" bike_racks="6" free_racks="6" terminal_type="sign" bike_numbers='' bike_types=""
+                   place_type="0"/>
+            <place uid="24226283" lat="23.242515" lng="77.387827" name="ASHOKA LAKE VIEW HOTEL" spot="1" number="9862"
+                   bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign" bike_numbers='79323'
+                   bike_types='{"15":1}' place_type="0">
+                <bike number="79323" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25970" pedelec_battery=""/>
+            </place>
+            <place uid="24868884" lat="23.233056" lng="77.432546" name="SMART PARKING ZONE 1 M.P. NAGAR" spot="1"
+                   number="9844" bikes="1" booked_bikes="0" bike_racks="6" free_racks="5" terminal_type="sign"
+                   bike_numbers='79292' bike_types='{"15":1}' place_type="0">
+                <bike number="79292" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25990" pedelec_battery=""/>
+            </place>
+            <place uid="26754937" lat="23.2300087" lng="77.4370919" bike="1" name="BIKE 79306" bikes="1"
+                   booked_bikes="0" free_racks="0" bike_numbers='79306' bike_types='{"15":1}' place_type="12">
+                <bike number="79306" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25964" pedelec_battery=""/>
+            </place>
+            <place uid="26757361" lat="23.2217173" lng="77.4037807" bike="1" name="BIKE 79424" bikes="1"
+                   booked_bikes="0" free_racks="0" bike_numbers='79424' bike_types='{"15":1}' place_type="12">
+                <bike number="79424" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="26146" pedelec_battery=""/>
+            </place>
+            <place uid="26766647" lat="23.2167799" lng="77.4280654" bike="1" name="BIKE 79039" bikes="1"
+                   booked_bikes="0" free_racks="0" bike_numbers='79039' bike_types='{"15":1}' place_type="12">
+                <bike number="79039" bike_type="15" lock_types='fork_lock' active="1" state="ok" electric_lock="1"
+                      boardcomputer="25830" pedelec_battery=""/>
+            </place>
+        </city>
+    </country>
+</markers>

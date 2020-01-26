@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="markers">
+            <element name="country">
+                <attribute name="available_bikes">
+                    <data type="integer"/>
+                </attribute>
+                <attribute name="booked_bikes">
+                    <data type="integer"/>
+                </attribute>
+                <attribute name="country">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="country_calling_code">
+                    <data type="integer"/>
+                </attribute>
+                <attribute name="country_name">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="currency">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="domain">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="email"/>
+                <attribute name="hotline">
+                    <data type="integer"/>
+                </attribute>
+                <attribute name="language">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="lat">
+                    <data type="decimal"/>
+                </attribute>
+                <attribute name="lng">
+                    <data type="decimal"/>
+                </attribute>
+                <attribute name="name"/>
+                <attribute name="policy">
+                    <data type="anyURI"/>
+                </attribute>
+                <attribute name="pricing">
+                    <data type="anyURI"/>
+                </attribute>
+                <attribute name="set_point_bikes">
+                    <data type="integer"/>
+                </attribute>
+                <attribute name="system_operator_address"/>
+                <attribute name="terms">
+                    <data type="anyURI"/>
+                </attribute>
+                <attribute name="timezone"/>
+                <attribute name="website">
+                    <data type="anyURI"/>
+                </attribute>
+                <attribute name="zoom">
+                    <data type="integer"/>
+                </attribute>
+                <element name="city">
+                    <attribute name="alias">
+                        <data type="NCName"/>
+                    </attribute>
+                    <attribute name="available_bikes">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="bike_types"/>
+                    <attribute name="booked_bikes">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="bounds"/>
+                    <attribute name="break">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="lat">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="lng">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="maps_icon">
+                        <data type="NCName"/>
+                    </attribute>
+                    <attribute name="name">
+                        <data type="NCName"/>
+                    </attribute>
+                    <attribute name="num_places">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="refresh_rate">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="return_to_official_only">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="set_point_bikes">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="uid">
+                        <data type="integer"/>
+                    </attribute>
+                    <attribute name="website">
+                        <data type="anyURI"/>
+                    </attribute>
+                    <attribute name="zoom">
+                        <data type="integer"/>
+                    </attribute>
+                    <oneOrMore>
+                        <element name="place">
+                            <optional>
+                                <attribute name="bike">
+                                    <data type="integer"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="bike_numbers"/>
+                            <optional>
+                                <attribute name="bike_racks">
+                                    <data type="integer"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="bike_types"/>
+                            <attribute name="bikes">
+                                <data type="integer"/>
+                            </attribute>
+                            <attribute name="booked_bikes">
+                                <data type="integer"/>
+                            </attribute>
+                            <attribute name="free_racks">
+                                <data type="integer"/>
+                            </attribute>
+                            <attribute name="lat">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="lng">
+                                <data type="decimal"/>
+                            </attribute>
+                            <optional>
+                                <attribute name="maintenance">
+                                    <data type="integer"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="name"/>
+                            <optional>
+                                <attribute name="number">
+                                    <data type="integer"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="place_type">
+                                <data type="integer"/>
+                            </attribute>
+                            <optional>
+                                <attribute name="spot">
+                                    <data type="integer"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="terminal_type">
+                                    <data type="NCName"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="uid">
+                                <data type="integer"/>
+                            </attribute>
+                            <zeroOrMore>
+                                <element name="bike">
+                                    <attribute name="active">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="bike_type">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="boardcomputer">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="electric_lock">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="lock_types">
+                                        <data type="NCName"/>
+                                    </attribute>
+                                    <attribute name="number">
+                                        <data type="integer"/>
+                                    </attribute>
+                                    <attribute name="pedelec_battery"/>
+                                    <attribute name="state">
+                                        <data type="NCName"/>
+                                    </attribute>
+                                </element>
+                            </zeroOrMore>
+                        </element>
+                    </oneOrMore>
+                </element>
+            </element>
+        </element>
+    </start>
+</grammar>
