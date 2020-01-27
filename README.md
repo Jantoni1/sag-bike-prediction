@@ -1,2 +1,2 @@
-# Spring-boot-Apache-Akka-Integration
-Demo project of Integrating Apache Akka  into Spring boot 
+# Bike Demand Prediction
+App created for calculating and visualizing bike rental demand in Bergen, Norway
