@@ -7,6 +7,7 @@ import com.sag.eiti.config.SpringProps;
 import com.sag.eiti.entity.PredictedTripsPerHour;
 import com.vaadin.flow.component.AbstractField;
 import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.charts.Chart;
@@ -66,11 +67,14 @@ public class MainView extends VerticalLayout {
 
         initUi();
 
-//        addClassName("centered-content");
-
         HorizontalLayout horizontalLayout = new HorizontalLayout(startDatePicker, startTimePicker, stopTimePicker, updateChartButton);
+        horizontalLayout.addClassName("centered-content");
 
-        add(horizontalLayout);
+        HorizontalLayout topBar = new HorizontalLayout(new Text("Bergen City Bike Demand Prediction"));
+        topBar.addClassName("top-bar");
+
+        add(topBar, horizontalLayout);
+        addClassName("remove-padding");
     }
 
     private void initUi() {
@@ -96,7 +100,6 @@ public class MainView extends VerticalLayout {
 
     private void initializeStartDatePicker() {
         startDatePicker = new DatePicker();
-        startDatePicker.setLabel("Select a day within this month");
         startDatePicker.setPlaceholder("Date within this month");
 
         LocalDate now = LocalDate.now();
@@ -108,15 +111,11 @@ public class MainView extends VerticalLayout {
     }
 
     private void initializeUpdateChartButton() {
-        // Button click listeners can be defined as lambda expressions
+
         updateChartButton = new Button("Show", e -> resetChart());
 
-        // Theme variants give you predefined extra styles for components.
-        // Example: Primary button is more prominent look.
         updateChartButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
-        // You can specify keyboard shortcuts for buttons.
-        // Example: Pressing enter in this view clicks the Button.
         updateChartButton.addClickShortcut(Key.ENTER);
     }
 

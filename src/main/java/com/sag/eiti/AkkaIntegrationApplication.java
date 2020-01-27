@@ -1,10 +1,7 @@
 package com.sag.eiti;
 
-import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.sag.eiti.actors.TestActor;
 import com.sag.eiti.config.SpringExtension;
-import com.sag.eiti.config.SpringProps;
 import com.typesafe.config.ConfigFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
