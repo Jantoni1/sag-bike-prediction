@@ -1,10 +1,14 @@
-package com.sag.eiti.service;
+package com.sag.eiti.actors;
 
+import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
+import com.sag.eiti.config.interfaces.Actor;
+import com.sag.eiti.dto.TimeSpanRidesDetails;
 import com.sag.eiti.dto.dark_sky.HistoricalHourWeatherMeasurement;
 import com.sag.eiti.dto.dark_sky.HistoricalWeather;
 import com.sag.eiti.dto.dark_sky.WeatherForecast;
 import com.sag.eiti.entity.TripsPerHourHistorical;
-import org.springframework.stereotype.Service;
+import lombok.Value;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
@@ -14,11 +18,54 @@ import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Service
-public class DarkSkyWeatherService {
+@Actor
+public class TemperatureCastActor extends AbstractActor {
+
+    @Value
+    public final static class TemperatureForecastRequest {
+        UUID id;
+        List<OffsetDateTime> requestedForecastHours;
+    }
+
+    @Value
+    public static class TemperatureForecastResponse {
+        UUID id;
+        private Map<OffsetDateTime, Double> hourlyTemperatures;
+    }
+
+    @Value
+    public static class HistoricalTemperatureRequest {
+        UUID id;
+        List<TimeSpanRidesDetails> requestedHours;
+    }
+
+    @Value
+    public static class HistoricalTemperatureResponse {
+        UUID id;
+        private List<TripsPerHourHistorical> tripsPerHourHistorical;
+    }
+
+    @Override
+    public AbstractActor.Receive createReceive() {
+        return receiveBuilder()
+                .match(TemperatureForecastRequest.class, this::onTemperatureForecastReceived)
+                .match(HistoricalTemperatureRequest.class, this::onHistoricalTemperatureRequestReceived)
+                .build();
+    }
+
+    public void onHistoricalTemperatureRequestReceived(HistoricalTemperatureRequest request) {
+        var data = new HistoricalTemperatureResponse(request.getId(), getHistoricalWeatherForDay(request.getRequestedHours()));
+        getSender().tell(data, context().self());
+    }
+
+    private void onTemperatureForecastReceived(TemperatureForecastRequest request) {
+        var data = getWeatherForecast(request.getRequestedForecastHours());
+        getSender().tell(new TemperatureForecastResponse(request.getId(), data), context().self());
+    }
 
     private final static String DARK_SKY_CORE_URL = "https://api.darksky.net/forecast/960b80074098b4e0739163acebdbd1d5/60.39299,5.32415";
 
@@ -26,7 +73,7 @@ public class DarkSkyWeatherService {
 
     private final static String DARK_SKY_FORECAST_URL = DARK_SKY_CORE_URL.concat("?units=ca&exclude=daily,currently");
 
-    public List<TripsPerHourHistorical> getHistoricalWeatherForDay(List<BergenCityBikesService.TimeSpanRidesDetails> requestedTimeSpans) {
+    public List<TripsPerHourHistorical> getHistoricalWeatherForDay(List<TimeSpanRidesDetails> requestedTimeSpans) {
         return requestedTimeSpans.stream().collect(Collectors.groupingBy(timeSpan -> timeSpan.getRequestedHour().withHour(0))).entrySet()
                 .stream().flatMap(entry -> {
                     var historicalWeather = getHistoricalWeatherForTimeSpan(entry.getKey()).getHourly().getData().stream()
@@ -91,4 +138,5 @@ public class DarkSkyWeatherService {
     private static String getDarkSkyUrl(OffsetDateTime dayDate) {
         return String.format(DARK_SKY_URL, dayDate.toEpochSecond());
     }
+
 }

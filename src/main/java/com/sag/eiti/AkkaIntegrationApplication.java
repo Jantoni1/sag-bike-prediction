@@ -30,10 +30,6 @@ public class AkkaIntegrationApplication {
     void init() {
         system = ActorSystem.create("actor-system", ConfigFactory.load());
         SpringExtension.getInstance().get(system).initialize(context);
-//
-//        ActorRef testActor= system.actorOf(SpringProps.create(system, TestActor.class));
-//
-//        testActor.tell("hello world",ActorRef.noSender());
     }
 
 }

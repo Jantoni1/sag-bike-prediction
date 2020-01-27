@@ -1,8 +1,11 @@
 package com.sag.eiti.vaadin_views;
 
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import com.sag.eiti.actors.BikeDemandActor;
+import com.sag.eiti.config.SpringProps;
 import com.sag.eiti.entity.PredictedTripsPerHour;
-import com.sag.eiti.service.BergenCityBikesService;
-import com.sag.eiti.service.BikePredictionService;
+import com.vaadin.flow.component.AbstractField;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -12,12 +15,16 @@ import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.timepicker.TimePicker;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -39,11 +46,10 @@ import java.util.stream.Collectors;
         enableInstallPrompt = true)
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
+@Push
 public class MainView extends VerticalLayout {
 
     private DatePicker startDatePicker;
-
-    private DatePicker stopDatePicker;
 
     private TimePicker startTimePicker;
 
@@ -53,17 +59,10 @@ public class MainView extends VerticalLayout {
 
     private Chart chart;
 
-    private BikePredictionService bikePredictionService;
+    private final ActorSystem system;
 
-    /**
-     * Construct a new Vaadin view.
-     * <p>
-     * Build the initial UI state for the user accessing the application.
-     *
-     * @param service The message service. Automatically injected Spring managed bean.
-     */
-    public MainView(@Autowired BikePredictionService service) {
-        this.bikePredictionService = service;
+    public MainView(@Autowired ActorSystem system) {
+        this.system = system;
 
         initUi();
 
@@ -105,12 +104,12 @@ public class MainView extends VerticalLayout {
         startDatePicker.setMin(now.withDayOfMonth(1));
         startDatePicker.setMax(now.withDayOfMonth(now.lengthOfMonth()));
 
-        startDatePicker.addValueChangeListener(event -> event.getValue());
+        startDatePicker.addValueChangeListener(AbstractField.ComponentValueChangeEvent::getValue);
     }
 
     private void initializeUpdateChartButton() {
         // Button click listeners can be defined as lambda expressions
-        updateChartButton = new Button("Show", e -> updateChart());
+        updateChartButton = new Button("Show", e -> resetChart());
 
         // Theme variants give you predefined extra styles for components.
         // Example: Primary button is more prominent look.
@@ -121,41 +120,66 @@ public class MainView extends VerticalLayout {
         updateChartButton.addClickShortcut(Key.ENTER);
     }
 
-    private void initializeStopDatePicker() {
-        stopDatePicker = new DatePicker();
-        stopDatePicker.setPlaceholder("Date within this month");
+    private void resetChart() {
 
-        LocalDate now = LocalDate.now();
+        ListSeries predictedRidesSeries = new ListSeries("Predicted", new ArrayList<>());
+        ListSeries ridesSeries = new ListSeries("Actual rides", new ArrayList<>());
 
-        stopDatePicker.setMin(now.withDayOfMonth(1));
-        stopDatePicker.setMax(now.withDayOfMonth(now.lengthOfMonth()));
+        var predictionTimeSpan = getRequestedTimeSpan(predictedRidesSeries);
 
-        stopDatePicker.addValueChangeListener(event -> event.getValue());
+        updateChart(predictionTimeSpan, Arrays.asList(predictedRidesSeries, ridesSeries));
+
+        ActorRef predictionBikeRidesManager = system.actorOf(SpringProps.create(system, BikeDemandActor.class));
+        predictionBikeRidesManager.tell(predictionTimeSpan, ActorRef.noSender());
+
+        if(predictionTimeSpan.getTimeSpanEnd().isBefore(LocalDateTime.now().atOffset(ZoneOffset.UTC).minusDays(1))) {
+            var historicalTimeSpan = getHistoricalRidesData(ridesSeries);
+
+            ActorRef historicalBikeRidesManager = system.actorOf(SpringProps.create(system, BikeDemandActor.class));
+            historicalBikeRidesManager.tell(historicalTimeSpan, ActorRef.noSender());
+        }
+
     }
 
-    private void updateChart() {
+    private void updateChart(BikeDemandActor.BikePredictionRequest predictionTimeSpan, List<Series> chartSeries) {
         Chart oldChart = chart;
-        chart = createChart();
+        chart = createChart(predictionTimeSpan, chartSeries);
         replace(oldChart, chart);
     }
 
-    private BergenCityBikesService.RequestedTimeSpan getRequestedTimeSpan() {
-        OffsetDateTime startDateTime = LocalDateTime
-                .of(startDatePicker.getValue(), startTimePicker.getValue())
-                .atOffset(ZoneOffset.UTC);
-        OffsetDateTime stopDateTime = LocalDateTime
-                .of(startDatePicker.getValue(), stopTimePicker.getValue())
-                .atOffset(ZoneOffset.UTC);
-        return new BergenCityBikesService.RequestedTimeSpan(startDateTime, stopDateTime);
+    private BikeDemandActor.BikePredictionRequest getRequestedTimeSpan(ListSeries predictedRidesSeries) {
+        return new BikeDemandActor.BikePredictionRequest(getStartDateTime(), getEndDateTime(), this, predictedRidesSeries);
     }
 
-    private Chart createChart() {
-        var requestedTimeSpan = getRequestedTimeSpan();
-        var chartData = bikePredictionService.getPrediction(requestedTimeSpan);
+    private BikeDemandActor.BikeHistoricalRidesRequest getHistoricalRidesData(ListSeries ridesSeries) {
+        return new BikeDemandActor.BikeHistoricalRidesRequest(getStartDateTime(), getEndDateTime(), this, ridesSeries);
+    }
 
+    private OffsetDateTime getStartDateTime() {
+        return LocalDateTime
+                .of(startDatePicker.getValue(), startTimePicker.getValue())
+                .atOffset(ZoneOffset.UTC);
+    }
+
+    private OffsetDateTime getEndDateTime() {
+        return LocalDateTime
+                .of(startDatePicker.getValue(), stopTimePicker.getValue())
+                .atOffset(ZoneOffset.UTC);
+    }
+
+    private Chart createChart(BikeDemandActor.BikePredictionRequest predictionTimeSpan, List<Series> chartSeries) {
         Chart chart = new Chart(ChartType.AREASPLINE);
 
         Configuration conf = chart.getConfiguration();
+
+        XAxis xAxis = new XAxis();
+        xAxis.setCategories(predictionTimeSpan.toHours().stream()
+                .map(OffsetDateTime::getHour)
+                .map(hourInt -> String.format("%02d:00", hourInt)).toArray(String[]::new));
+
+        xAxis.setPlotBands();
+
+        chart.getConfiguration().addxAxis(xAxis);
 
         conf.setTitle(new Title("Bike usage"));
 
@@ -167,23 +191,6 @@ public class MainView extends VerticalLayout {
         legend.setX(150);
         legend.setY(100);
         conf.setLegend(legend);
-
-        XAxis xAxis = new XAxis();
-        xAxis.setCategories(chartData.stream()
-                .map(predictedTripsPerHour -> predictedTripsPerHour.getPredictedHourStart().atOffset(ZoneOffset.UTC).getHour())
-                .map(hourInt -> String.format("%02d:00", hourInt)).toArray(String[]::new));
-
-//        PlotBand plotBand = new PlotBand(4.5, 6.5);
-//        plotBand.setZIndex(1);
-        xAxis.setPlotBands();
-
-//        XAxis xAxis = new XAxis();
-//        xAxis.setCategories("Monday", "Tuesday", "Wednesday",
-//                "Thursday", "Friday", "Saturday", "Sunday");
-//        PlotBand plotBand = new PlotBand(4.5, 6.5);
-//        plotBand.setZIndex(1);
-//        xAxis.setPlotBands(plotBand);
-//        conf.addxAxis(xAxis);
 
         YAxis yAxis = new YAxis();
         yAxis.setTitle(new AxisTitle("Number of bikes"));
@@ -198,34 +205,27 @@ public class MainView extends VerticalLayout {
         PlotOptionsArea plotOptions = new PlotOptionsArea();
         conf.setPlotOptions(plotOptions);
 
+        chartSeries.forEach(series -> chart.getConfiguration().addSeries(series));
 
-        chart.getConfiguration().addxAxis(xAxis);
+        return chart;
+    }
 
-        ListSeries o = new ListSeries("Predicted", chartData.stream()
-                .map(PredictedTripsPerHour::getPredictedRides)
-                .collect(Collectors.toList()));
+    public void addPredictedSeries(List<PredictedTripsPerHour> bikePredictions) {
+        getUI().ifPresent(ui -> ui.access(() -> {
 
-        chart.getConfiguration().addSeries(o);
 
-        if(requestedTimeSpan.getTimeSpanEnd().isBefore(LocalDateTime.now().atOffset(ZoneOffset.UTC).minusDays(1))) {
-            var historicalBikeRidesData =  bikePredictionService.getHistoricalRidesData(requestedTimeSpan);
+        }));
+    }
 
-            ListSeries actualRidesCount = new ListSeries("Actual rides", historicalBikeRidesData.stream()
-                    .map(BikePredictionService.BikeData::getNumberOfRides)
+    public void addActualRidesSeries(List<BikeDemandActor.BikeHistoricalRidesResponse> historicalBikeRides) {
+        getUI().ifPresent(ui -> ui.access(() -> {
+
+            ListSeries actualRidesCount = new ListSeries("Actual rides", historicalBikeRides.stream()
+                    .map(BikeDemandActor.BikeHistoricalRidesResponse::getNumberOfRides)
                     .collect(Collectors.toList()));
 
             chart.getConfiguration().addSeries(actualRidesCount);
-        }
-
-//        var data = bikePredictionService.getData();
-
-//        ListSeries o = new ListSeries("Predicted", data.stream().map(PredictedTripsPerHour::getPredictedRides)
-//                .limit(7).collect(Collectors.toList()));
-        // You can also add values separately
-//        o.addData(12);
-//        conf.addSeries(o);
-//        conf.addSeries(new ListSeries("Used", 1, 3, 4, 3, 3, 5, 4));
-        return chart;
+        }));
     }
 
 }
