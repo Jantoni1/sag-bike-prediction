@@ -1,6 +1,9 @@
 package com.sag.eiti;
 
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
+import com.sag.eiti.actors.PredictionModelActor;
 import com.sag.eiti.config.SpringExtension;
 import com.typesafe.config.ConfigFactory;
 import org.springframework.beans.factory.annotation.Autowired;

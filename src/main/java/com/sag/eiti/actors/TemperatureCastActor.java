@@ -49,12 +49,29 @@ public class TemperatureCastActor extends AbstractActor {
         private List<TripsPerHourHistorical> tripsPerHourHistorical;
     }
 
+    @Value
+    public static class HourlyHistoricalTemperatureForDayRequest {
+        private OffsetDateTime day;
+    }
+
+    @Value
+    public static class HourlyHistoricalTemperatureForDayResponse {
+        private List<HistoricalHourWeatherMeasurement> hourlyData;
+    }
+
     @Override
     public AbstractActor.Receive createReceive() {
         return receiveBuilder()
                 .match(TemperatureForecastRequest.class, this::onTemperatureForecastReceived)
                 .match(HistoricalTemperatureRequest.class, this::onHistoricalTemperatureRequestReceived)
+                .match(HourlyHistoricalTemperatureForDayRequest.class, this::onHourlyDayRequest)
                 .build();
+    }
+
+    private void onHourlyDayRequest(HourlyHistoricalTemperatureForDayRequest request) {
+        var dailyData = getHistoricalWeatherForTimeSpan(request.getDay());
+        var response = new HourlyHistoricalTemperatureForDayResponse(dailyData.getHourly().getData());
+        getSender().tell(response, getSelf());
     }
 
     public void onHistoricalTemperatureRequestReceived(HistoricalTemperatureRequest request) {

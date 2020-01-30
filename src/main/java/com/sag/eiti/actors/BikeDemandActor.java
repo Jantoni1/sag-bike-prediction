@@ -346,4 +346,5 @@ public class BikeDemandActor extends AbstractActor {
         private int missingRequiredHistoricalTripMonths;
     }
 
+
 }
