@@ -3,8 +3,10 @@ package com.sag.eiti.vaadin_views;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import com.sag.eiti.actors.BikeDemandActor;
+import com.sag.eiti.actors.PredictionModelActor;
 import com.sag.eiti.config.SpringProps;
 import com.sag.eiti.entity.PredictedTripsPerHour;
+import com.sag.eiti.service.BikeDemandPredictionService;
 import com.vaadin.flow.component.AbstractField;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.Text;
@@ -62,8 +64,11 @@ public class MainView extends VerticalLayout {
 
     private final ActorSystem system;
 
-    public MainView(@Autowired ActorSystem system) {
+    private BikeDemandPredictionService bikeDemandPredictionService;
+
+    public MainView(@Autowired ActorSystem system, @Autowired BikeDemandPredictionService bikeDemandPredictionService) {
         this.system = system;
+        this.bikeDemandPredictionService = bikeDemandPredictionService;
 
         initUi();
 
@@ -123,21 +128,31 @@ public class MainView extends VerticalLayout {
 
         ListSeries predictedRidesSeries = new ListSeries("Predicted", new ArrayList<>());
         ListSeries ridesSeries = new ListSeries("Actual rides", new ArrayList<>());
+        ListSeries trainedModelSeries = new ListSeries("Quick Prediction", new ArrayList<>());
+
+        List<Series> usedSeries = new ArrayList<>();
+        usedSeries.add(predictedRidesSeries);
 
         var predictionTimeSpan = getRequestedTimeSpan(predictedRidesSeries);
 
-        updateChart(predictionTimeSpan, Arrays.asList(predictedRidesSeries, ridesSeries));
+        var quickPrediction = bikeDemandPredictionService.getPrediction(predictionTimeSpan);
+        if(!quickPrediction.isEmpty()) {
+            quickPrediction.forEach(trainedModelSeries::addData);
+            usedSeries.add(trainedModelSeries);
+        }
 
         ActorRef predictionBikeRidesManager = system.actorOf(SpringProps.create(system, BikeDemandActor.class));
         predictionBikeRidesManager.tell(predictionTimeSpan, ActorRef.noSender());
 
         if(predictionTimeSpan.getTimeSpanEnd().isBefore(LocalDateTime.now().atOffset(ZoneOffset.UTC).minusDays(1))) {
+            usedSeries.add(ridesSeries);
             var historicalTimeSpan = getHistoricalRidesData(ridesSeries);
 
             ActorRef historicalBikeRidesManager = system.actorOf(SpringProps.create(system, BikeDemandActor.class));
             historicalBikeRidesManager.tell(historicalTimeSpan, ActorRef.noSender());
         }
 
+        updateChart(predictionTimeSpan, usedSeries);
     }
 
     private void updateChart(BikeDemandActor.BikePredictionRequest predictionTimeSpan, List<Series> chartSeries) {
@@ -167,7 +182,7 @@ public class MainView extends VerticalLayout {
     }
 
     private Chart createChart(BikeDemandActor.BikePredictionRequest predictionTimeSpan, List<Series> chartSeries) {
-        Chart chart = new Chart(ChartType.AREASPLINE);
+        Chart chart = new Chart(ChartType.SPLINE);
 
         Configuration conf = chart.getConfiguration();
 

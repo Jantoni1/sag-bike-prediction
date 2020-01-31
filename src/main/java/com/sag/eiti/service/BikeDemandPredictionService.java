@@ -45,12 +45,20 @@ public class BikeDemandPredictionService {
         bikeDemandActor.tell(trainingRequest, bikeDemandActor);
     }
 
+    public List<Integer> getPrediction(BikeDemandActor.BikePredictionRequest request) {
+        return getPrediction(request.getTimeSpanStart(), request.getTimeSpanEnd());
+    }
+
     public List<Integer> getPrediction(Long requestedPeriodStartSeconds, Long requestedPeriodEndSeconds) {
         OffsetDateTime requestedPeriodStart = Instant.ofEpochSecond(requestedPeriodStartSeconds)
                 .atOffset(ZoneOffset.UTC).truncatedTo(ChronoUnit.HOURS);
         OffsetDateTime requestedPeriodEnd = Instant.ofEpochSecond(requestedPeriodEndSeconds)
                 .atOffset(ZoneOffset.UTC).truncatedTo(ChronoUnit.HOURS);
 
+        return getPrediction(requestedPeriodStart, requestedPeriodEnd);
+    }
+
+    private List<Integer> getPrediction(OffsetDateTime requestedPeriodStart, OffsetDateTime requestedPeriodEnd) {
         if(!validateRequestedHours(requestedPeriodStart, requestedPeriodEnd)) {
             return new ArrayList<>();
         }

@@ -91,7 +91,7 @@ public class TemperatureCastActor extends AbstractActor {
     private final static String DARK_SKY_FORECAST_URL = DARK_SKY_CORE_URL.concat("?units=ca&exclude=daily,currently");
 
     public List<TripsPerHourHistorical> getHistoricalWeatherForDay(List<TimeSpanRidesDetails> requestedTimeSpans) {
-        return requestedTimeSpans.stream().collect(Collectors.groupingBy(timeSpan -> timeSpan.getRequestedHour().withHour(0))).entrySet()
+        return requestedTimeSpans.stream().collect(Collectors.groupingBy(timeSpan -> timeSpan.getRequestedHour().truncatedTo(ChronoUnit.DAYS))).entrySet()
                 .stream().flatMap(entry -> {
                     var historicalWeather = getHistoricalWeatherForTimeSpan(entry.getKey()).getHourly().getData().stream()
                             .collect(Collectors.toMap(HistoricalHourWeatherMeasurement::getOffsetDateTime, Function.identity()));

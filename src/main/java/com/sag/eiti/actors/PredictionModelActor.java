@@ -8,7 +8,6 @@ import com.sag.eiti.dto.RidesDataWithTemperature;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
-import org.apache.tomcat.jni.Time;
 import scala.concurrent.Await;
 import scala.concurrent.duration.Duration;
 

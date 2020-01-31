@@ -45,8 +45,4 @@ public class PredictionModelDataProviderActor extends AbstractActor {
         OffsetDateTime trainingDateEnd;
     }
 
-    public static class TrainingModelUpdateRequest {
-        ActorRef predictionModelActor;
-    }
-
 }
