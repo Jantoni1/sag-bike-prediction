@@ -79,7 +79,7 @@ public class HistoricalHourWeatherMeasurement {
     public Double ozone;
 
     public void setOffsetDateTime(ZoneOffset zoneOffset) {
-        this.offsetDateTime = OffsetDateTime.ofInstant(Instant.ofEpochSecond(timeStamp), zoneOffset);
+        this.offsetDateTime = OffsetDateTime.ofInstant(Instant.ofEpochSecond(timeStamp), zoneOffset).plusHours(1);
     }
 
 }

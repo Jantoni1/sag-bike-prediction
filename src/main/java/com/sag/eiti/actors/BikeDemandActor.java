@@ -7,10 +7,10 @@ import com.sag.eiti.config.SpringProps;
 import com.sag.eiti.config.interfaces.Actor;
 import com.sag.eiti.entity.PredictedTripsPerHour;
 import com.sag.eiti.entity.TripsPerHourHistorical;
-import com.sag.eiti.vaadin_views.MainView;
+import com.sag.eiti.vaadin.MainView;
 import com.vaadin.flow.component.charts.model.ListSeries;
-import com.vaadin.flow.component.charts.model.Series;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Value;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 
@@ -321,7 +321,10 @@ public class BikeDemandActor extends AbstractActor {
     }
 
     @Data
+    @EqualsAndHashCode(onlyExplicitlyIncluded = true)
     private static class PredictionRequestData {
+
+        @EqualsAndHashCode.Include
         private UUID id;
         private BikePredictionRequest predictionRequest;
 

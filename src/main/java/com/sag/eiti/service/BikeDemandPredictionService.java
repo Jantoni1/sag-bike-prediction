@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import scala.concurrent.Await;
 import scala.concurrent.duration.Duration;
 
+import javax.validation.Valid;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -77,7 +78,7 @@ public class BikeDemandPredictionService {
         }
     }
 
-    private boolean validateRequestedHours(OffsetDateTime requestedPeriodStart, OffsetDateTime requestedPeriodEnd) {
+    private boolean validateRequestedHours( OffsetDateTime requestedPeriodStart, OffsetDateTime requestedPeriodEnd) {
         OffsetDateTime now = OffsetDateTime.now().withOffsetSameInstant(ZoneOffset.UTC).truncatedTo(ChronoUnit.HOURS);
         return (requestedPeriodStart.equals(now) || requestedPeriodStart.isAfter(now))
                 && (requestedPeriodEnd.equals(requestedPeriodStart) || requestedPeriodEnd.isAfter(requestedPeriodStart))

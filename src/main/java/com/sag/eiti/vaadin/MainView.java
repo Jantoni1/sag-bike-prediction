@@ -1,9 +1,8 @@
-package com.sag.eiti.vaadin_views;
+package com.sag.eiti.vaadin;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import com.sag.eiti.actors.BikeDemandActor;
-import com.sag.eiti.actors.PredictionModelActor;
 import com.sag.eiti.config.SpringProps;
 import com.sag.eiti.entity.PredictedTripsPerHour;
 import com.sag.eiti.service.BikeDemandPredictionService;
@@ -26,7 +25,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
